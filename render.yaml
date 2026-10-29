@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: madina-school-live
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: DATABASE_URL
+        sync: false # paste the Neon connection string in the dashboard
